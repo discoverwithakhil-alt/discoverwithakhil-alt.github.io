@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | MUSIC STUDIO BY AKHIL KARTHIKEYA</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071211;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b1c1a;
+      padding: 25px 7%;
+      border-bottom: 1px solid #b99a55;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #d6b76a;
+      font-size: 25px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #eeeeee;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d6b76a;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 55px auto;
+      padding: 0 22px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro h2 {
+      color: #d6b76a;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #c5ceca;
+    }
+
+    .contact-card {
+      background: #102320;
+      border: 1px solid #344b43;
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 7px;
+      color: #e5cf91;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #52665d;
+      border-radius: 6px;
+      background: #071613;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #d6b76a;
+      border-color: #d6b76a;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #d6b76a;
+      color: #071211;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ead18d;
+    }
+
+    .email-note {
+      text-align: center;
+      margin-top: 25px;
+      color: #c5ceca;
+    }
+
+    .email-note a {
+      color: #d6b76a;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      background: #0b1c1a;
+      border-top: 1px solid #b99a55;
+      color: #aebbb5;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 19px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .intro h2 {
+        font-size: 28px;
+      }
+
+      .contact-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MUSIC STUDIO BY AKHIL KARTHIKEYA</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="compositions.html">MY COMPOSITIONS</a>
+      <a href="background-scores.html">BACKGROUND SCORES</a>
+      <a href="about.html">ABOUT ME</a>
+      <a href="collaborations.html">FILM COLLABORATIONS</a>
+      <a href="callboard.html">THE ARTIST CALLBOARD</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>LET'S CONNECT</h2>
+      <p>
+        Have a musical idea, collaboration proposal, or want to join
+        our creative team? Send us a message.
+      </p>
+    </section>
+
+    <section class="contact-card">
+      <form action="https://formsubmit.co/musicstudiobyakhilkarthikeya@gmail.com"
+            method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New Enquiry - MUSIC STUDIO BY AKHIL KARTHIKEYA">
+
+        <input type="hidden" name="_template" value="table">
+
+        <input type="text" name="_honey"
+               style="display:none">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="Name"
+               placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="Email"
+               placeholder="Enter your email address" required>
+
+        <label for="reason">Reason for Contacting</label>
+        <select id="reason" name="Reason for Contacting" required>
+          <option value="">Choose an option</option>
+          <option>Musician Application</option>
+          <option>Film Collaboration</option>
+          <option>Music Composition Enquiry</option>
+          <option>Background Score Enquiry</option>
+          <option>General Enquiry</option>
+        </select>
+
+        <label for="instrument">Instrument / Musical Role (Optional)</label>
+        <input type="text" id="instrument" name="Instrument or Role"
+               placeholder="e.g. Keyboardist, Drummer, Vocalist">
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="Message"
+                  placeholder="Tell us about your idea, experience, or collaboration interest..."
+                  required></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </section>
+
+    <div class="email-note">
+      <p>You can also contact the studio directly:</p>
+      <a href="mailto:musicstudiobyakhilkarthikeya@gmail.com">
+        musicstudiobyakhilkarthikeya@gmail.com
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
