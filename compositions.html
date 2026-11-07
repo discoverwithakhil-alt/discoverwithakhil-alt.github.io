@@ -3,43 +3,1045 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>My Compositions | MUSIC STUDIO BY AKHIL KARTHIKEYA</title>
+
+<meta name="description" content="Discover original musical compositions and creative projects by MUSIC STUDIO BY AKHIL KARTHIKEYA.">
+
+<meta name="theme-color" content="#071B2B">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#080d12;color:#f5f5f5;font-family:Arial,sans-serif}
-header{padding:25px 7%;border-bottom:1px solid #24504f}
-.logo{color:#e4c77f;letter-spacing:2px;font-weight:bold}
-nav{margin-top:20px;display:flex;flex-wrap:wrap;gap:18px}
-nav a{color:#ddd;text-decoration:none;font-size:12px}
-nav a:hover{color:#e4c77f}
-main{text-align:center;padding:100px 8%;min-height:70vh;background:radial-gradient(ellipse,#17454a,#080d12 75%)}
-h1{color:#e4c77f;font-size:clamp(32px,6vw,60px);letter-spacing:3px}
-p{color:#b8c4c8;line-height:1.8}
-.line{height:2px;width:65px;background:#58c5b7;margin:25px auto}
-footer{text-align:center;padding:30px;color:#84949b;border-top:1px solid #24504f;font-size:12px}
+:root {
+  --navy: #071B2B;
+  --navy2: #0A2437;
+  --card: #102F43;
+  --teal: #00D6C9;
+  --blue: #168BFF;
+  --amber: #FFB938;
+  --white: #F3F8FC;
+  --muted: #A8BDCC;
+  --border: rgba(164,204,220,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(7,27,43,0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  max-width: 1450px;
+  margin: auto;
+  padding: 17px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  max-width: 260px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+}
+
+.logo span {
+  color: var(--teal);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.nav-links a {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--muted);
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--teal);
+}
+
+.nav-links .contact-link {
+  color: var(--navy);
+  background: var(--amber);
+  padding: 10px 17px;
+  border-radius: 4px;
+}
+
+.nav-links .contact-link:hover {
+  background: var(--teal);
+}
+
+.menu-toggle {
+  display: none;
+  background: var(--navy2);
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 8px 13px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+/* PAGE HERO */
+
+.page-hero {
+  position: relative;
+  padding: 105px 7% 90px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 30%, rgba(0,214,201,0.15), transparent 40%),
+    radial-gradient(ellipse at 10% 100%, rgba(22,139,255,0.13), transparent 40%),
+    linear-gradient(135deg,#071B2B,#0B293E);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero::after {
+  content: "MUSIC";
+  position: absolute;
+  right: -30px;
+  bottom: -65px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(120px,22vw,300px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.025);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1250px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.page-hero h1 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(42px,7vw,82px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.page-hero h1 span {
+  background: linear-gradient(100deg,var(--teal),#A9F5ED,var(--blue));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero-description {
+  max-width: 690px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 90px 7%;
+}
+
+.section-inner {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section-label {
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(28px,4vw,44px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  margin-bottom: 17px;
+}
+
+.section-description {
+  color: var(--muted);
+  max-width: 720px;
+  font-size: 14px;
+}
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+/* FEATURED PROJECT */
+
+.featured-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.feature-art {
+  min-height: 390px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(0,214,201,0.3),transparent 32%),
+    radial-gradient(circle at 80% 90%,rgba(22,139,255,0.3),transparent 40%),
+    linear-gradient(145deg,#0B3446,#071B2B 75%);
+  border: 1px solid rgba(0,214,201,0.3);
+}
+
+.feature-art::before,
+.feature-art::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(0,214,201,0.2);
+  border-radius: 50%;
+}
+
+.feature-art::before {
+  width: 290px;
+  height: 290px;
+}
+
+.feature-art::after {
+  width: 390px;
+  height: 390px;
+  border-color: rgba(22,139,255,0.17);
+}
+
+.art-content {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+}
+
+.art-content small {
+  color: var(--teal);
+  font-size: 10px;
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.art-content h3 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(35px,5vw,65px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
+
+.art-content p {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.project-info .status {
+  display: inline-block;
+  color: var(--amber);
+  border: 1px solid rgba(255,185,56,0.4);
+  background: rgba(255,185,56,0.07);
+  padding: 7px 12px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+}
+
+.project-info h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(30px,4vw,46px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.project-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  padding: 7px 12px;
+  background: rgba(0,214,201,0.07);
+  border: 1px solid rgba(0,214,201,0.2);
+  border-radius: 3px;
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-note {
+  padding: 13px 15px;
+  border-left: 2px solid var(--amber);
+  background: rgba(255,185,56,0.06);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* PROJECT COLLECTION */
+
+.collection-section {
+  background: #091F30;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 23px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: linear-gradient(145deg,#102F43,#0A2437);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,214,201,0.55);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.23);
+}
+
+.card-art {
+  min-height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-art::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+}
+
+.card-art h3 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 29px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  padding: 15px;
+}
+
+.art-storm {
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,214,201,0.35),transparent 40%),
+    linear-gradient(140deg,#102D43,#071B2B);
+}
+
+.art-rudhira {
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,185,56,0.25),transparent 35%),
+    linear-gradient(140deg,#39201C,#071B2B);
+}
+
+.art-original {
+  background:
+    radial-gradient(circle at 50% 50%,rgba(22,139,255,0.35),transparent 40%),
+    linear-gradient(140deg,#102A50,#071B2B);
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-category {
+  color: var(--teal);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.card-content h3 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 19px;
+}
+
+.card-footer {
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-footer span {
+  color: var(--amber);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* AUDIO PREVIEW PLACEHOLDER */
+
+.preview-note {
+  margin-top: 45px;
+  padding: 22px 25px;
+  background: rgba(22,139,255,0.07);
+  border: 1px solid rgba(22,139,255,0.22);
+  border-radius: 7px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.preview-icon {
+  color: var(--teal);
+  font-size: 24px;
+}
+
+.preview-note strong {
+  display: block;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.preview-note p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* CREATIVE PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.process-item {
+  padding-top: 20px;
+  border-top: 2px solid var(--teal);
+}
+
+.process-item .number {
+  color: var(--amber);
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.process-item h3 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.process-item p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  padding: 75px 7%;
+}
+
+.cta-box {
+  max-width: 1250px;
+  margin: auto;
+  padding: 55px 7%;
+  border-radius: 12px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(0,214,201,0.18),transparent 35%),
+    radial-gradient(circle at 90% 90%,rgba(22,139,255,0.2),transparent 35%),
+    linear-gradient(130deg,#102F43,#0B2539);
+  border: 1px solid rgba(0,214,201,0.25);
+}
+
+.cta-box h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: clamp(27px,4vw,42px);
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.cta-box p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: auto auto 25px;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  background: var(--amber);
+  color: var(--navy);
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--teal);
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 42px 7% 23px;
+  background: #051522;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-brand span {
+  color: var(--teal);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.footer-links a:hover {
+  color: var(--teal);
+}
+
+.copyright {
+  max-width: 1250px;
+  margin: 27px auto 0;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: #8298A8;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px) {
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 9px; }
+}
+
+@media(max-width:800px) {
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(7,27,43,0.98);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 12px; }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .feature-art { min-height: 320px; }
+  .project-grid { grid-template-columns: repeat(2,1fr); }
+  .process-grid { grid-template-columns: 1fr; gap: 25px; }
+}
+
+@media(max-width:550px) {
+  .logo { font-size: 10px; max-width: 220px; }
+  .nav-container { padding: 14px 6%; }
+
+  .page-hero { padding: 80px 7%; }
+  .page-hero h1 { letter-spacing: -2px; }
+
+  .section { padding: 70px 7%; }
+
+  .project-grid { grid-template-columns: 1fr; }
+  .feature-art { min-height: 280px; }
+
+  .preview-note {
+    align-items: flex-start;
+  }
+
+  .cta { padding: 60px 6%; }
+  .cta-box { padding: 42px 22px; }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links { justify-content: center; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 </style>
 </head>
+
 <body>
-<header>
-<div class="logo">MUSIC STUDIO BY AKHIL KARTHIKEYA</div>
-<nav>
-<a href="index.html">HOME</a>
-<a href="compositions.html">COMPOSITIONS</a>
-<a href="background-scores.html">BACKGROUND SCORES</a>
-<a href="about.html">ABOUT</a>
-<a href="collaborations.html">COLLABORATIONS</a>
-<a href="callboard.html">ARTIST CALLBOARD</a>
-<a href="contact.html">CONTACT</a>
-</nav>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      MUSIC STUDIO <span>BY AKHIL KARTHIKEYA</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="compositions.html" class="active">COMPOSITIONS</a>
+      <a href="background-scores.html">BACKGROUND SCORES</a>
+      <a href="about.html">ABOUT</a>
+      <a href="collaborations.html">COLLABORATIONS</a>
+      <a href="callboard.html">ARTIST CALLBOARD</a>
+      <a href="contact.html" class="contact-link">CONTACT</a>
+    </nav>
+
+  </div>
 </header>
+
 <main>
-<h1>MY COMPOSITIONS</h1>
-<div class="line"></div>
-<p>A collection of original musical creations.</p>
-<p>Original melodies. Unique sounds. Cinematic imagination.</p>
-<p>My compositions will be showcased here soon.</p>
+
+<!-- PAGE INTRODUCTION -->
+
+<section class="page-hero">
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      THE SOUND OF ORIGINALITY
+    </div>
+
+    <h1>
+      MY MUSICAL<br>
+      <span>CREATIONS.</span>
+    </h1>
+
+    <p class="hero-description">
+      A collection of original musical ideas, creative experiments
+      and compositions. Every project begins with an idea and grows
+      into its own unique musical identity.
+    </p>
+
+  </div>
+</section>
+
+<!-- FEATURED PROJECT -->
+
+<section class="section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <div class="section-label">FEATURED CREATIVE PROJECT</div>
+      <h2 class="section-title">A Story Told Through Sound.</h2>
+      <p class="section-description">
+        Explore a featured original musical project currently
+        being developed at the studio.
+      </p>
+    </div>
+
+    <div class="featured-project">
+
+      <div class="feature-art">
+        <div class="art-content">
+          <small>AN ORIGINAL MUSICAL PROJECT</small>
+          <h3>AFTER<br>THE STORM</h3>
+          <p>EMOTION • ATMOSPHERE • CINEMA</p>
+        </div>
+      </div>
+
+      <div class="project-info">
+
+        <span class="status">IN DEVELOPMENT</span>
+
+        <h2>AFTER THE STORM</h2>
+
+        <p>
+          An original cinematic musical concept built around
+          atmosphere, emotion, mystery and a hypnotic musical
+          identity. A journey through expressive melodies,
+          rich harmony and immersive sound.
+        </p>
+
+        <div class="project-tags">
+          <span class="tag">CINEMATIC</span>
+          <span class="tag">EMOTIONAL</span>
+          <span class="tag">ATMOSPHERIC</span>
+          <span class="tag">ORIGINAL</span>
+        </div>
+
+        <div class="project-note">
+          This project is currently being developed.
+          Audio preview will be added when the final version is ready.
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECT COLLECTION -->
+
+<section class="section collection-section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <div class="section-label">THE COMPOSITION ARCHIVE</div>
+      <h2 class="section-title">Inside the Creative Process.</h2>
+      <p class="section-description">
+        A growing collection of musical concepts and original
+        creative projects from the studio.
+      </p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+
+        <div class="card-art art-storm">
+          <h3>AFTER<br>THE STORM</h3>
+        </div>
+
+        <div class="card-content">
+          <div class="card-category">CINEMATIC SONG CONCEPT</div>
+          <h3>After the Storm</h3>
+          <p>
+            A mysterious and emotional cinematic musical journey
+            with atmospheric textures and expressive melodies.
+          </p>
+          <div class="card-footer">
+            <span>IN DEVELOPMENT</span>
+            <span>01 / 03</span>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="project-card">
+
+        <div class="card-art art-rudhira">
+          <h3>RUDHIRA</h3>
+        </div>
+
+        <div class="card-content">
+          <div class="card-category">CINEMATIC MUSIC PROJECT</div>
+          <h3>Rudhira</h3>
+          <p>
+            An original dark and intense villain-entry background
+            score concept with a powerful cinematic identity.
+          </p>
+          <div class="card-footer">
+            <span>IN DEVELOPMENT</span>
+            <span>02 / 03</span>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="project-card">
+
+        <div class="card-art art-original">
+          <h3>THE NEXT<br>CHAPTER</h3>
+        </div>
+
+        <div class="card-content">
+          <div class="card-category">FUTURE CREATIONS</div>
+          <h3>More Original Music</h3>
+          <p>
+            New melodies, musical experiments and original
+            compositions will be introduced here as they develop.
+          </p>
+          <div class="card-footer">
+            <span>COMING SOON</span>
+            <span>03 / 03</span>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="preview-note">
+      <div class="preview-icon">♫</div>
+      <div>
+        <strong>THE LISTENING EXPERIENCE IS COMING</strong>
+        <p>
+          Audio previews and music players will be added as
+          individual compositions are ready for publication.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CREATIVE PROCESS -->
+
+<section class="section">
+  <div class="section-inner">
+
+    <div class="section-label">BEHIND EVERY COMPOSITION</div>
+
+    <h2 class="section-title">From Imagination to Music.</h2>
+
+    <p class="section-description">
+      Every original creation has a journey of its own.
+    </p>
+
+    <div class="process-grid">
+
+      <div class="process-item">
+        <div class="number">01 / THE IDEA</div>
+        <h3>Inspiration</h3>
+        <p>
+          Discovering a feeling, a melody or a musical idea
+          that can become the foundation of a composition.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="number">02 / THE CREATION</div>
+        <h3>Experimentation</h3>
+        <p>
+          Exploring melodies, harmony, rhythm, instrumentation
+          and sound to build a distinctive musical identity.
+        </p>
+      </div>
+
+      <div class="process-item">
+        <div class="number">03 / THE EXPERIENCE</div>
+        <h3>Expression</h3>
+        <p>
+          Shaping the musical idea into a complete experience
+          that communicates emotion and imagination.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+  <div class="cta-box">
+
+    <div class="section-label">MUSIC IS BETTER TOGETHER</div>
+
+    <h2>Let's Create Something Extraordinary.</h2>
+
+    <p>
+      Interested in musical collaborations or creative projects?
+      Discover the studio's collaboration opportunities and
+      connect through the official contact page.
+    </p>
+
+    <a href="collaborations.html" class="btn">
+      EXPLORE COLLABORATIONS ↗
+    </a>
+
+  </div>
+</section>
+
 </main>
-<footer>© 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA</footer>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      MUSIC STUDIO <span>BY AKHIL KARTHIKEYA</span>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">HOME</a>
+      <a href="background-scores.html">BACKGROUND SCORES</a>
+      <a href="about.html">ABOUT</a>
+      <a href="callboard.html">CALLBOARD</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA.
+    <br>
+    CREATING MUSIC. BUILDING EMOTIONS.
+  </div>
+
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.textContent = "☰";
+  });
+});
+</script>
+
 </body>
 </html>
