@@ -1,207 +1,1131 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUSIC STUDIO BY AKHIL KARTHIKEYA</title>
-<meta name="description" content="The official music studio of Akhil Karthikeya. Original compositions, cinematic background scores and musical collaborations.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <title>MUSIC STUDIO BY AKHIL KARTHIKEYA | Original Music & Cinematic Scores</title>
 
-html { scroll-behavior: smooth; }
+  <meta name="description" content="Explore original compositions, cinematic background scores and musical creations by MUSIC STUDIO BY AKHIL KARTHIKEYA.">
+  <meta name="theme-color" content="#071B2B">
 
-body {
-  background: #080d12;
-  color: #f5f5f5;
-  font-family: Arial, sans-serif;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 7%;
-  border-bottom: 1px solid #183c40;
-  background: #080d12;
-}
+  <style>
+    :root {
+      --navy: #071B2B;
+      --navy-light: #0D293D;
+      --navy-card: #102F43;
+      --teal: #00D6C9;
+      --blue: #168BFF;
+      --amber: #FFB938;
+      --white: #F3F8FC;
+      --muted: #A8BDCC;
+      --border: rgba(164, 204, 220, 0.15);
+    }
 
-.logo {
-  color: #d7b66b;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-nav a {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
 
-nav a:hover { color: #d7b66b; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.hero {
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 70px 8%;
-  background:
-    radial-gradient(ellipse at 50% 45%, #17454a 0%, #101d25 40%, #080d12 75%);
-}
+    button {
+      font: inherit;
+    }
 
-.hero-content { max-width: 900px; }
+    ::selection {
+      background: var(--teal);
+      color: var(--navy);
+    }
 
-.tagline {
-  color: #58c5b7;
-  letter-spacing: 5px;
-  font-size: 12px;
-  margin-bottom: 28px;
-}
+    /* NAVIGATION */
 
-h1 {
-  color: #e4c77f;
-  font-size: clamp(35px, 7vw, 76px);
-  line-height: 1.15;
-  letter-spacing: 3px;
-}
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(7, 27, 43, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
 
-.hero p {
-  color: #c5cbd0;
-  margin: 25px auto 35px;
-  line-height: 1.9;
-  max-width: 650px;
-  font-size: 16px;
-}
+    .nav-container {
+      max-width: 1450px;
+      margin: auto;
+      padding: 17px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
 
-.button {
-  display: inline-block;
-  padding: 15px 30px;
-  border: 1px solid #d7b66b;
-  color: #e4c77f;
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 12px;
-  transition: .3s;
-}
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1.4;
+      max-width: 260px;
+    }
 
-.button:hover {
-  background: #d7b66b;
-  color: #080d12;
-}
+    .logo span {
+      color: var(--teal);
+    }
 
-section {
-  padding: 85px 9%;
-  text-align: center;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-.section-title {
-  color: #e4c77f;
-  font-size: 30px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
 
-.description {
-  color: #aebbc1;
-  line-height: 1.9;
-  max-width: 720px;
-  margin: auto;
-}
+    .nav-links a:hover {
+      color: var(--teal);
+    }
 
-.divider {
-  width: 65px;
-  height: 2px;
-  background: #58c5b7;
-  margin: 25px auto;
-}
+    .nav-links .nav-contact {
+      color: var(--navy);
+      background: var(--amber);
+      padding: 10px 17px;
+      border-radius: 4px;
+    }
 
-footer {
-  padding: 30px 15px;
-  text-align: center;
-  border-top: 1px solid #183c40;
-  color: #84949b;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
+    .nav-links .nav-contact:hover {
+      background: var(--teal);
+      color: var(--navy);
+    }
 
-@media(max-width: 750px) {
-  header {
-    flex-direction: column;
-    gap: 20px;
-  }
-  nav { justify-content: center; }
-  nav a { font-size: 11px; }
-}
-</style>
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      color: var(--white);
+      background: var(--navy-light);
+      padding: 9px 13px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 21px;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 740px;
+      padding: 115px 7% 105px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse at 75% 40%, rgba(0,214,201,0.13), transparent 40%),
+        radial-gradient(ellipse at 15% 75%, rgba(22,139,255,0.13), transparent 38%),
+        linear-gradient(135deg, #071B2B, #0A2639 55%, #071B2B);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(0,214,201,0.12);
+      border-radius: 50%;
+      right: -150px;
+      top: 30px;
+      box-shadow:
+        0 0 0 45px rgba(0,214,201,0.025),
+        0 0 0 95px rgba(22,139,255,0.025);
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: rgba(0,214,201,0.10);
+      filter: blur(110px);
+      right: 8%;
+      top: 25%;
+      z-index: -1;
+    }
+
+    .hero-inner {
+      max-width: 1250px;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(43px, 7.2vw, 94px);
+      line-height: 1.08;
+      letter-spacing: -4px;
+      font-weight: 900;
+      max-width: 1000px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(100deg, var(--teal), #A9F5ED 45%, var(--blue));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 37px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 24px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      color: var(--navy);
+      background: var(--amber);
+      border: 1px solid var(--amber);
+    }
+
+    .btn-primary:hover {
+      background: var(--teal);
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 35px rgba(0,214,201,0.2);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border: 1px solid rgba(243,248,252,0.35);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-outline:hover {
+      color: var(--teal);
+      border-color: var(--teal);
+      transform: translateY(-4px);
+    }
+
+    /* SOUND VISUAL */
+
+    .sound-visual {
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .sound-visual span {
+      width: 5px;
+      border-radius: 20px;
+      background: linear-gradient(to top, var(--blue), var(--teal));
+      animation: sound 1.1s ease-in-out infinite alternate;
+      box-shadow: 0 0 15px rgba(0,214,201,0.3);
+    }
+
+    .sound-visual span:nth-child(3n) {
+      animation-delay: 0.2s;
+    }
+
+    .sound-visual span:nth-child(3n + 1) {
+      animation-delay: 0.5s;
+    }
+
+    .sound-visual span:nth-child(3n + 2) {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes sound {
+      from { height: 22px; }
+      to { height: 145px; }
+    }
+
+    /* SECTION COMMON */
+
+    .section {
+      padding: 105px 7%;
+    }
+
+    .section-inner {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(29px, 4vw, 47px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 720px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center .section-description {
+      margin: auto;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      background: #091F30;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-text p {
+      color: var(--muted);
+      margin-top: 18px;
+      font-size: 15px;
+    }
+
+    .intro-panel {
+      position: relative;
+      min-height: 300px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(0,214,201,0.25);
+      border-radius: 10px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(22,139,255,0.17), transparent 40%),
+        linear-gradient(135deg, #102F43, #0A2436);
+      overflow: hidden;
+    }
+
+    .intro-panel .big-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 65px;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--teal);
+      margin-bottom: 15px;
+    }
+
+    .intro-panel h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .intro-panel p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FEATURE CARDS */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+      margin-top: 48px;
+    }
+
+    .feature-card {
+      position: relative;
+      padding: 34px 29px;
+      min-height: 265px;
+      background: linear-gradient(145deg, #102F43, #0A2436);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      transition: all 0.35s ease;
+      overflow: hidden;
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      right: -65px;
+      bottom: -65px;
+      border-radius: 50%;
+      background: rgba(0,214,201,0.12);
+      filter: blur(25px);
+      transition: all 0.35s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-9px);
+      border-color: rgba(0,214,201,0.55);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .feature-card:hover::after {
+      transform: scale(1.5);
+    }
+
+    .card-number {
+      color: var(--amber);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .feature-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 19px;
+      margin-bottom: 13px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .card-link {
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .card-link:hover {
+      color: var(--amber);
+    }
+
+    /* CREATIVE VISION */
+
+    .vision-section {
+      background:
+        radial-gradient(ellipse at 15% 50%, rgba(22,139,255,0.10), transparent 45%),
+        #091F30;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .vision-item {
+      padding-top: 23px;
+      border-top: 2px solid var(--teal);
+    }
+
+    .vision-item h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .vision-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* COLLABORATION CTA */
+
+    .collab-section {
+      padding: 100px 7%;
+    }
+
+    .collab-box {
+      max-width: 1250px;
+      margin: auto;
+      padding: 65px 7%;
+      border-radius: 12px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(0,214,201,0.19), transparent 35%),
+        radial-gradient(circle at 90% 90%, rgba(22,139,255,0.22), transparent 35%),
+        linear-gradient(130deg, #102F43, #0B2539);
+      border: 1px solid rgba(0,214,201,0.27);
+    }
+
+    .collab-box h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(27px, 4vw, 43px);
+      line-height: 1.25;
+      margin-bottom: 17px;
+    }
+
+    .collab-box p {
+      max-width: 650px;
+      margin: auto auto 27px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 45px 7% 25px;
+      background: #051522;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand span {
+      color: var(--teal);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 11px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--teal);
+    }
+
+    .copyright {
+      max-width: 1250px;
+      margin: 30px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: #8298A8;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      animation: reveal 1s ease both;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+
+      .sound-visual {
+        right: 2%;
+        opacity: 0.3;
+      }
+
+      .intro-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-container {
+        padding: 15px 6%;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background: rgba(7,27,43,0.98);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 680px;
+        padding: 100px 7%;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .sound-visual {
+        right: -70px;
+        top: 60%;
+        transform: translateY(-50%) scale(0.7);
+        opacity: 0.18;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .logo {
+        font-size: 11px;
+        max-width: 225px;
+      }
+
+      .hero {
+        min-height: 650px;
+        padding: 90px 7%;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 60px);
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section {
+        padding: 75px 7%;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-panel {
+        padding: 30px;
+      }
+
+      .collab-section {
+        padding: 65px 6%;
+      }
+
+      .collab-box {
+        padding: 45px 25px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">MUSIC STUDIO</div>
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="compositions.html">COMPOSITIONS</a>
-    <a href="background-scores.html">BACKGROUND SCORES</a>
-    <a href="about.html">ABOUT</a>
-    <a href="collaborations.html">COLLABORATIONS</a>
-    <a href="callboard.html">ARTIST CALLBOARD</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-</header>
+  <!-- NAVIGATION -->
 
-<main>
-  <section class="hero">
-    <div class="hero-content">
-      <div class="tagline">ORIGINAL MUSIC • CINEMATIC EXPERIENCES</div>
+  <header class="navbar">
+    <div class="nav-container">
 
-      <h1>MUSIC STUDIO<br>BY AKHIL KARTHIKEYA</h1>
-
-      <div class="divider"></div>
-
-      <p>
-        Enter a world where melodies become stories,
-        rhythms create emotions and music brings
-        imagination to life.
-      </p>
-
-      <a href="compositions.html" class="button">
-        EXPLORE MY MUSIC
+      <a href="index.html" class="logo">
+        MUSIC STUDIO <span>BY AKHIL KARTHIKEYA</span>
       </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="compositions.html">COMPOSITIONS</a>
+        <a href="background-scores.html">BACKGROUND SCORES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="collaborations.html">COLLABORATIONS</a>
+        <a href="callboard.html">ARTIST CALLBOARD</a>
+        <a href="contact.html" class="nav-contact">CONTACT</a>
+      </nav>
+
     </div>
-  </section>
+  </header>
 
-  <section>
-    <h2 class="section-title">WELCOME TO MY MUSICAL WORLD</h2>
-    <div class="divider"></div>
-    <p class="description">
-      A creative space dedicated to original compositions,
-      cinematic background scores and musical experimentation.
-      Discover my musical journey and explore opportunities
-      to create extraordinary music together.
-    </p>
-  </section>
-</main>
+  <main>
 
-<footer>
-  © 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA
-  <br><br>
-  CREATING MUSIC. BUILDING EMOTIONS.
-</footer>
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+      <div class="hero-inner reveal">
+
+        <div class="eyebrow">
+          ORIGINAL MUSIC • CINEMATIC EXPERIENCES
+        </div>
+
+        <h1>
+          MUSIC THAT<br>
+          <span class="highlight">MOVES THE SOUL.</span>
+        </h1>
+
+        <p class="hero-description">
+          Welcome to MUSIC STUDIO BY AKHIL KARTHIKEYA —
+          a creative destination for original compositions,
+          cinematic background scores and musical imagination.
+          Where every sound has a story and every melody creates an emotion.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="compositions.html" class="btn btn-primary">
+            EXPLORE MY MUSIC ↗
+          </a>
+
+          <a href="background-scores.html" class="btn btn-outline">
+            DISCOVER BACKGROUND SCORES →
+          </a>
+        </div>
+
+      </div>
+
+      <div class="sound-visual" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="section intro-section">
+      <div class="section-inner intro-grid">
+
+        <div class="intro-text">
+          <div class="section-label">THE CREATIVE SPACE</div>
+
+          <h2 class="section-title">
+            Beyond Music.<br>
+            Into Emotion.
+          </h2>
+
+          <p>
+            Music is more than a combination of notes and rhythms.
+            It is a language that creates memories, builds atmosphere
+            and brings stories to life.
+          </p>
+
+          <p>
+            This studio is a space for exploring original musical ideas,
+            experimenting with sound and creating distinctive compositions
+            and cinematic experiences.
+          </p>
+
+          <p>
+            Every creation begins with an idea.
+            Every idea has the potential to become something extraordinary.
+          </p>
+        </div>
+
+        <div class="intro-panel">
+          <div class="big-number">∞</div>
+          <h3>Limitless Musical Imagination</h3>
+          <p>
+            Original ideas. Distinctive sounds.
+            Cinematic experiences. Endless possibilities.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPLORE THE STUDIO -->
+
+    <section class="section">
+      <div class="section-inner">
+
+        <div class="center">
+          <div class="section-label">EXPLORE THE STUDIO</div>
+
+          <h2 class="section-title">
+            A World of Musical Creations
+          </h2>
+
+          <p class="section-description">
+            Discover different dimensions of music,
+            from original melodies to powerful cinematic soundscapes.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+            <div class="card-number">01 / ORIGINAL MUSIC</div>
+            <h3>My Compositions</h3>
+            <p>
+              Explore original musical creations, melodies,
+              songs and experiments shaped by imagination.
+            </p>
+            <a href="compositions.html" class="card-link">
+              EXPLORE COMPOSITIONS ↗
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-number">02 / CINEMATIC SOUND</div>
+            <h3>Background Scores</h3>
+            <p>
+              Discover cinematic musical concepts,
+              atmospheric themes and character-driven scores.
+            </p>
+            <a href="background-scores.html" class="card-link">
+              EXPLORE SCORES ↗
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-number">03 / THE CREATOR</div>
+            <h3>About Me</h3>
+            <p>
+              Learn about the creative journey,
+              musical interests and vision behind this studio.
+            </p>
+            <a href="about.html" class="card-link">
+              DISCOVER MORE ↗
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-number">04 / COLLABORATION</div>
+            <h3>Film Collaborations</h3>
+            <p>
+              Explore opportunities to bring musical ideas
+              into creative film and storytelling projects.
+            </p>
+            <a href="collaborations.html" class="card-link">
+              EXPLORE COLLABORATIONS ↗
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-number">05 / MUSICAL COMMUNITY</div>
+            <h3>The Artist Callboard</h3>
+            <p>
+              A space for musicians and creative talents
+              interested in exploring musical collaborations.
+            </p>
+            <a href="callboard.html" class="card-link">
+              JOIN THE CALLBOARD ↗
+            </a>
+          </article>
+
+          <article class="feature-card">
+            <div class="card-number">06 / GET IN TOUCH</div>
+            <h3>Contact the Studio</h3>
+            <p>
+              For creative enquiries, musical discussions
+              and collaboration opportunities.
+            </p>
+            <a href="contact.html" class="card-link">
+              CONTACT THE STUDIO ↗
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE VISION -->
+
+    <section class="section vision-section">
+      <div class="section-inner">
+
+        <div class="center">
+          <div class="section-label">THE CREATIVE VISION</div>
+
+          <h2 class="section-title">
+            Music With Identity.
+          </h2>
+
+          <p class="section-description">
+            Three creative principles that guide the musical journey.
+          </p>
+        </div>
+
+        <div class="vision-grid">
+
+          <div class="vision-item">
+            <h3>ORIGINALITY</h3>
+            <p>
+              Every composition deserves its own identity,
+              character and musical personality.
+            </p>
+          </div>
+
+          <div class="vision-item">
+            <h3>EMOTION</h3>
+            <p>
+              Create music that communicates feelings,
+              enhances stories and stays memorable.
+            </p>
+          </div>
+
+          <div class="vision-item">
+            <h3>EXPERIMENTATION</h3>
+            <p>
+              Explore instruments, textures, rhythms
+              and unexpected combinations of sound.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLABORATION INVITATION -->
+
+    <section class="collab-section">
+      <div class="collab-box">
+
+        <div class="section-label">LET'S CREATE TOGETHER</div>
+
+        <h2>
+          Extraordinary Music<br>
+          Begins With Collaboration.
+        </h2>
+
+        <p>
+          Music becomes even more exciting when creative minds
+          come together. Explore the Artist Callboard and discover
+          opportunities to contribute your musical talent.
+        </p>
+
+        <a href="callboard.html" class="btn btn-primary">
+          EXPLORE THE ARTIST CALLBOARD ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        MUSIC STUDIO <span>BY AKHIL KARTHIKEYA</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">HOME</a>
+        <a href="compositions.html">COMPOSITIONS</a>
+        <a href="background-scores.html">SCORES</a>
+        <a href="about.html">ABOUT</a>
+        <a href="callboard.html">CALLBOARD</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA.
+      <br>
+      CREATING MUSIC. BUILDING EMOTIONS.
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+  </script>
 
 </body>
 </html>
