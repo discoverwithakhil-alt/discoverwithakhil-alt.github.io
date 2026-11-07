@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSIC STUDIO BY AKHIL KARTHIKEYA</title>
+<meta name="description" content="The official music studio of Akhil Karthikeya. Original compositions, cinematic background scores and musical collaborations.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #080d12;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 7%;
+  border-bottom: 1px solid #183c40;
+  background: #080d12;
+}
+
+.logo {
+  color: #d7b66b;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+nav a:hover { color: #d7b66b; }
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 8%;
+  background:
+    radial-gradient(ellipse at 50% 45%, #17454a 0%, #101d25 40%, #080d12 75%);
+}
+
+.hero-content { max-width: 900px; }
+
+.tagline {
+  color: #58c5b7;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+h1 {
+  color: #e4c77f;
+  font-size: clamp(35px, 7vw, 76px);
+  line-height: 1.15;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  color: #c5cbd0;
+  margin: 25px auto 35px;
+  line-height: 1.9;
+  max-width: 650px;
+  font-size: 16px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid #d7b66b;
+  color: #e4c77f;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #d7b66b;
+  color: #080d12;
+}
+
+section {
+  padding: 85px 9%;
+  text-align: center;
+}
+
+.section-title {
+  color: #e4c77f;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #aebbc1;
+  line-height: 1.9;
+  max-width: 720px;
+  margin: auto;
+}
+
+.divider {
+  width: 65px;
+  height: 2px;
+  background: #58c5b7;
+  margin: 25px auto;
+}
+
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid #183c40;
+  color: #84949b;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+@media(max-width: 750px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  nav { justify-content: center; }
+  nav a { font-size: 11px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MUSIC STUDIO</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="compositions.html">COMPOSITIONS</a>
+    <a href="background-scores.html">BACKGROUND SCORES</a>
+    <a href="about.html">ABOUT</a>
+    <a href="collaborations.html">COLLABORATIONS</a>
+    <a href="callboard.html">ARTIST CALLBOARD</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tagline">ORIGINAL MUSIC • CINEMATIC EXPERIENCES</div>
+
+      <h1>MUSIC STUDIO<br>BY AKHIL KARTHIKEYA</h1>
+
+      <div class="divider"></div>
+
+      <p>
+        Enter a world where melodies become stories,
+        rhythms create emotions and music brings
+        imagination to life.
+      </p>
+
+      <a href="compositions.html" class="button">
+        EXPLORE MY MUSIC
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">WELCOME TO MY MUSICAL WORLD</h2>
+    <div class="divider"></div>
+    <p class="description">
+      A creative space dedicated to original compositions,
+      cinematic background scores and musical experimentation.
+      Discover my musical journey and explore opportunities
+      to create extraordinary music together.
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 2026 MUSIC STUDIO BY AKHIL KARTHIKEYA
+  <br><br>
+  CREATING MUSIC. BUILDING EMOTIONS.
+</footer>
+
+</body>
+</html>
